@@ -1,4 +1,4 @@
-// Demonstrates Abstraction & Encapsulation
+
 public abstract class Account {
     private String accountNumber;
     private String accountHolderName;
@@ -10,7 +10,6 @@ public abstract class Account {
         this.balance = Math.max(initialBalance, 0.0);
     }
 
-    // Getters and Setters
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -27,7 +26,7 @@ public abstract class Account {
         this.balance = balance;
     }
 
-    // Deposit method (common to all accounts)
+   
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
@@ -37,7 +36,6 @@ public abstract class Account {
         }
     }
 
-    // Abstract method to be overridden by subclasses (Polymorphism)
     public abstract boolean withdraw(double amount);
 
     public abstract void displayAccountDetails();

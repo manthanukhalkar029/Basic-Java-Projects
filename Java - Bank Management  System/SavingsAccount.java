@@ -1,5 +1,6 @@
-// Demonstrates Inheritance & Polymorphism
+
 public class SavingsAccount extends Account {
+
     private double interestRate; // e.g., 0.04 for 4%
 
     public SavingsAccount(String accountNumber, String accountHolderName, double initialBalance, double interestRate) {

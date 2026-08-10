@@ -1,4 +1,4 @@
-// Demonstrates Inheritance & Polymorphism with Overdraft Limit
+
 public class CheckingAccount extends Account {
     private double overdraftLimit;
 
