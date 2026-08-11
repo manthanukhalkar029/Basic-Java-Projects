@@ -16,12 +16,13 @@ public class Main {
             System.out.println("3. Deposit Money");
             System.out.println("4. Withdraw Money");
             System.out.println("5. Check Account Details");
-            System.out.println("6. Display All Accounts");
-            System.out.println("7. Exit");
-            System.out.print("Enter your choice (1-7): ");
+            System.out.println("6. Print Account Statement");
+            System.out.println("7. Display All Accounts");
+            System.out.println("8. Exit");
+            System.out.print("Enter your choice (1-8): ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -88,10 +89,21 @@ public class Main {
                     break;
 
                 case 6:
-                    bank.displayAllAccounts();
+                    System.out.print("Enter Account Number: ");
+                    String stmtAccNum = scanner.nextLine();
+                    Account stmtAcc = bank.getAccount(stmtAccNum);
+                    if (stmtAcc != null) {
+                        stmtAcc.printAccountStatement();
+                    } else {
+                        System.out.println("Account not found.");
+                    }
                     break;
 
                 case 7:
+                    bank.displayAllAccounts();
+                    break;
+
+                case 8:
                     System.out.println("Thank you for using the Bank Management System!");
                     scanner.close();
                     System.exit(0);

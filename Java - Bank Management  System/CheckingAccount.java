@@ -12,6 +12,8 @@ public class CheckingAccount extends Account {
         if (amount > 0 && (getBalance() + overdraftLimit) >= amount) {
             setBalance(getBalance() - amount);
             System.out.println("Successfully withdrew ₹" + amount + ". Current balance: ₹" + getBalance());
+            //Record transaction
+            addTransaction("WITHDRAWAL", amount);
             return true;
         } else {
             System.out.println("Overdraft limit exceeded or invalid amount.");

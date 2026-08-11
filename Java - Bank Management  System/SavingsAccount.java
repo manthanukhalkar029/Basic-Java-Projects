@@ -1,6 +1,5 @@
 
 public class SavingsAccount extends Account {
-
     private double interestRate; // e.g., 0.04 for 4%
 
     public SavingsAccount(String accountNumber, String accountHolderName, double initialBalance, double interestRate) {
@@ -13,6 +12,8 @@ public class SavingsAccount extends Account {
         if (amount > 0 && getBalance() >= amount) {
             setBalance(getBalance() - amount);
             System.out.println("Successfully withdrew ₹" + amount + ". Remaining balance: ₹" + getBalance());
+            //Record transaction
+            addTransaction("WITHDRAWAL", amount);
             return true;
         } else {
             System.out.println("Insufficient balance or invalid amount.");
