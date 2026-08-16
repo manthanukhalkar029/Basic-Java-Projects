@@ -34,4 +34,5 @@ A modular, menu-driven Bank Management System built in Java that runs directly i
 ├── SavingsAccount.java  # Subclass with interest rate logic
 ├── CheckingAccount.java # Subclass with overdraft limit logic
 ├── Bank.java           # Central manager handling account storage and lookups
+├── Transaction.java    # Displays the transaction Data of an Account
 └── Main.java           # Command Line Interface (CLI) entry point
